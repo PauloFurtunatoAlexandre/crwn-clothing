@@ -35,14 +35,14 @@ class SignUp extends React.Component {
         password
       );
 
+      await createUserProfileDocument(user, { displayName });
+
       this.setState({
         displayName: "",
         email: "",
         password: "",
         confirmPassword: "",
       });
-
-      createUserProfileDocument(user, { displayName });
     } catch (error) {
       console.log(error);
     }
@@ -57,44 +57,46 @@ class SignUp extends React.Component {
   };
 
   render() {
+    const { displayName, email, password, confirmPassword } = this.state;
     return (
       <div className="sign-up">
         <h2 className="title">I do not have an account</h2>
-        <span className="sign-up-form" onSubmit={this.handleSubmit}>
+        <span>Sign up with your email and password</span>
+        <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="displayName"
             onChange={this.handleChange}
             label="Display Name"
-            value={this.displayName}
+            value={displayName}
             requiered
           />
           <FormInput
             type="email"
-            name="Email"
+            name="email"
             onChange={this.handleChange}
             label="Email"
-            value={this.email}
-            requiered
+            value={email}
+            required
           />
           <FormInput
             type="password"
             name="password"
             onChange={this.handleChange}
             label="Password"
-            value={this.password}
+            value={password}
             requiered
           />
           <FormInput
-            type="text"
+            type="password"
             name="confirmPassword"
             onChange={this.handleChange}
             label="Confirm Password"
-            value={this.confirmPassword}
+            value={confirmPassword}
             requiered
           />
           <CustomButton type="submit">Sign Up</CustomButton>
-        </span>
+        </form>
       </div>
     );
   }
