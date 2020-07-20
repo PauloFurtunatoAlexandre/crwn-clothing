@@ -4,7 +4,7 @@ import FormInput from "../form-input/Form-imput.component";
 import CustomButton from "../custom-button/Custom-button.component";
 
 import { signInWithGoogle } from "../../firebase/Firebase.utils";
-import { auth, createUserProfileDocument } from "../../firebase/Firebase.utils";
+import { auth } from "../../firebase/Firebase.utils";
 
 import "./Sign-in.styles.scss";
 
