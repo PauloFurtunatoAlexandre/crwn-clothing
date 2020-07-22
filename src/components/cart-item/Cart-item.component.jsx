@@ -30,8 +30,6 @@ const CartItem = ({ item, cleartItem }) => {
 
 const mapDispatchToProps = (dispatch) => ({
   cleartItem: (item) => dispatch(clearItemFromCart(item)),
-  // addItem: (item) => dispatch(addItem(item)),
-  // removeItem: (item) => dispatch(removeItem(item)),
 });
 
 export default connect(null, mapDispatchToProps)(CartItem);
