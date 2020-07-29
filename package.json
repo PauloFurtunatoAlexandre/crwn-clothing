@@ -1,6 +1,10 @@
 {
   "name": "crwn-clothing",
-  "version": "0.1.0",
+  "description": "a really cool ecommerce",
+  "version": "1.0.0",
+  "engines": {
+    "node": "13.8.0"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
