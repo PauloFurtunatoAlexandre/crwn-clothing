@@ -3,7 +3,7 @@
   "description": "a really cool ecommerce",
   "version": "1.0.0",
   "engines": {
-    "node": ">=12.X"
+    "node": "12.X"
   },
   "private": true,
   "dependencies": {
